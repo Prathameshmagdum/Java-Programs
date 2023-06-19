@@ -1,0 +1,36 @@
+public class ReverseStr
+{
+	public static void main (String args[])
+	{
+		String str = "Prathamesh";
+		String rev = "";
+		
+		//Logic 1 as concatenating
+		/*int len = str.length();
+		
+		for(int i=len-1;i>=0;i--)
+		{
+			rev=rev+str.charAt(i);
+		}
+		System.out.println("The reverse sring is :"+rev);*/
+		
+		//logic 2 using chararray[]
+		
+		/*char a[] = str.toCharArray();
+		
+		int len = a.length;
+		
+		for(int i=len-1;i>=0; i--)
+		{
+			rev= rev + a[i];
+		}
+		System.out.println("The reverse string will be:"+rev);*/
+		
+		//logic 3 using stringBuffer
+		
+		StringBuffer sb = new StringBuffer (str);
+		
+		System.out.println();
+		
+	}
+}

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class ReverseEachWordInString
+{
+	public static void main(String args [])
+	{
+		Scanner sc = new Scanner (System.in);
+		System.out.println("Enter a string : ");
+		String str=sc.nextLine();
+		
+		String [] words = str.split(" ");
+		
+		String revstr="";
+		
+		for(String w:words)
+		{
+			String revword="";
+			for(int i=w.length()-1;i>=0;i--)
+			{
+				revword+=w.charAt(i);
+			}
+			revstr+=revword+" ";
+		}
+		System.out.println("The reverse string will be : "+revstr);
+	}
+}

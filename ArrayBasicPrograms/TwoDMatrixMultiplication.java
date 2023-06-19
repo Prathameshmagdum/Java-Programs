@@ -1,0 +1,81 @@
+import java.util.Scanner;
+public class TwoDMatrixMultiplication
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter first, What by what matrix you want: ");
+		int r1 = sc.nextInt();
+		int c1 = sc.nextInt();
+		System.out.println(r1+" X "+c1);
+		
+		int [][] one_matrix=new int [r1][c1];
+		for(int i=0;i<one_matrix.length;i++)
+		{
+			for(int j=0;j<one_matrix[0].length;j++)
+			{
+				one_matrix[i][j]=sc.nextInt();
+			}
+		}
+		System.out.println("First Matrix: ");
+		for(int i=0;i<one_matrix.length;i++)
+		{
+			for(int j=0;j<one_matrix[i].length;j++)
+			{
+				System.out.print(one_matrix[i][j]+" ");
+			}
+			System.out.println();
+		
+		}
+		
+		
+		System.out.println("Enter second, What by what matrix you want: ");
+		int r2 = sc.nextInt();
+		int c2 = sc.nextInt();
+		System.out.println(r2+" X "+c2);
+		
+		int [][] two_matrix=new int [r2][c2];
+		for(int i=0;i<two_matrix.length;i++)
+		{
+			for(int j=0;j<two_matrix[0].length;j++)
+			{
+				two_matrix[i][j]=sc.nextInt();
+			}
+		}
+		System.out.println("second Matrix: ");
+		
+		for(int i=0;i<two_matrix.length;i++)
+		{
+			for(int j=0;j<two_matrix[0].length;j++)
+			{
+				System.out.print(two_matrix[i][j]+" ");
+			}
+			System.out.println();
+		
+		}
+		
+		int [][] prod = new int [r1][c2];
+		for(int i=0;i<prod.length;i++)
+		{
+			for(int j=0;j<prod[i].length;j++)
+			{
+				for(int k=0;k<c1;k++)
+				{
+					prod[i][j]+=one_matrix[i][k] * two_matrix[k][j];
+				}
+			}
+		}
+		
+		System.out.println("The multiplication of two matrices will be: ");
+		
+		for(int i=0;i<prod.length;i++)
+		{
+			for(int j=0;j<prod[i].length;j++)
+			{
+				System.out.print(prod[i][j]+" ");
+			}
+			System.out.println();
+		
+		}
+	}
+}
